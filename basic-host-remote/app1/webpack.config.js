@@ -39,6 +39,12 @@ module.exports = {
       template: './public/index.html',
     }),
   ],
+  // load React stuff from a CDN
+  externalsType: 'script',
+  externals: {
+    'react': ['https://unpkg.com/react@17/umd/react.development.js', 'React'],
+    'react-dom': ['https://unpkg.com/react-dom@17/umd/react-dom.development.js', 'ReactDOM'],
+  },
 };
 
 function getRemoteEntryUrl(port) {
